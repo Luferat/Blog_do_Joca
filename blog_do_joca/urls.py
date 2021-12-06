@@ -20,8 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Blog na raiz do site --> http://localhost:8000/
-    # path('', include('blog.urls', namespace='blog')),
+    path('', include('blog.urls', namespace='blog')),
 
     # Blog na URL 'blog' do site --> http://localhost:8000/blog/
-    path('blog/', include('blog.urls', namespace='blog')),
+    # path('blog/', include('blog.urls', namespace='blog')),
 ]
