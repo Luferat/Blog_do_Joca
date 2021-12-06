@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Posts Recentes{% endblock %}
+
+{% block header_h1 %}🐍 Blog do Joca{% endblock %}
+
+{% block content %}
+
+    <h2>Artigos recentes</h2>
+
+    {% for post in post_list %}
+
+        <article>
+
+            <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+
+            <small>Publicado em {{ post.created }} por {{ post.author }}.</small>
+
+            <div>{{ post.body|linebreaks|truncatewords:10 }}</div>
+
+        </article>
+
+    {% endfor %}
+
+{% endblock %}
