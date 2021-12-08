@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from contact import views as contact_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # Contatos --> http://localhost:8000/contact/
+    path('contact/', contact_views.contact_view, name='contact'),
 
     # Blog na raiz do site --> http://localhost:8000/
     path('', include('blog.urls', namespace='blog')),

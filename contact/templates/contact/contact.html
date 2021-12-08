@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Faça contato{% endblock %}
+
+{% block content %}
+
+<h1>Faça contato</h1>
+<p>Preencha todos os campos para entrar em contato com o Joca.</p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Enviar">
+</form>&nbsp;
+
+{% endblock %}

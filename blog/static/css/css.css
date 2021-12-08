@@ -39,6 +39,12 @@ blockquote {
   padding-bottom: 0.9rem;
 }
 
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 .wrap {
   position: relative;
   width: 100%;
@@ -53,15 +59,22 @@ blockquote {
 header {
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
+  border-bottom: 3px dotted grey;
 }
 
 header h1 {
   padding: 0 0 0.5rem 0;
-  border-bottom: 3px dotted grey;
 }
 
 header span {
   font-size: 4rem;
+}
+
+nav {
+  padding: 0.5rem;
+  border-top: 3px dotted grey;
+  background: rgba(0, 0, 0, 0.05);
+  font-weight: bold;
 }
 
 main {
@@ -74,4 +87,13 @@ footer {
   text-align: center;
   background: rgba(255, 255, 255, 0.7);
   border-top: 3px dotted grey;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
 }
